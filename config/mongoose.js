@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const env = require('./environment');
 // connect with database
-mongoose.connect(process.env.MONGO_CONNECT_DB,{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_CONNECT_DB);
 
 const db =  mongoose.connection;
 // if in connect any error
