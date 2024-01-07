@@ -1,0 +1,16 @@
+<div id="layout-section">
+  
+  <% if(locals.user){%>
+    <h3><%= user.name %></h3>
+    <h4><a href="/profile">Profile</a></h4>
+    <h4><a href="/dashboard">Home</a></h4>
+    <h4><a href="/students/addStudents">Add Students</a></h4>
+    <h4><a href="/interview/addInterview">Add Interview</a></h4>
+    <h4><a href="/signOut">Log Out</a></h4>
+  
+    <%}else {%>    
+    
+    <h4><a href="/">Sign In</a></h4>
+    <h4><a href="/signUp">Sign Up</a></h4>
+    <%}%>
+  </div>

@@ -1,0 +1,20 @@
+<%if(locals.user){%> 
+
+<h1>
+    Welcome Edit students page
+</h1>
+    <form action="/students/updateStudent/<%= student.id %>" method="POST">
+      <input type="text" name="name" value="<%= student.name %>" placeholder="Student Name" required id="">
+      <input type="email" name="email" value="<%= student.email %>" placeholder="Student Email" required id="">
+      <input type="text" name="collage" value="<%= student.collage %>" placeholder="Collage Name" required id="">
+      <input type="text" name="batchName" value="<%= student.batchName %>" placeholder="Enrolled Batch Name" required id="">
+      <input type="text" name="dsaScore" value="<%= student.dsaScore %>" placeholder="Dsa Score" required id="">
+      <input type="text" name="webDevScore" value="<%= student.webDevScore %>" placeholder="Web Dev Score" required id="">
+      <input type="text" name="reactScore" value="<%= student.reactScore %>" placeholder="React Score" required id="">
+      <select name="placement" id="">
+        <option value="Placed" <%= student.placement === "Placed" ? 'selected' : '' %>>Placed</option>
+        <option value="No placed" <%= student.placement === "No placed" ? 'selected' : '' %>>No Placed</option>
+      </select>
+      <input type="submit" value="Update" id="">
+    </form>
+ <%}%>

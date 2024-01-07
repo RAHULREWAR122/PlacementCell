@@ -1,0 +1,32 @@
+#interview{
+    margin: auto;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40%;
+    background: radial-gradient(red,blue,black);
+}
+#interview-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+#interview-form>input{
+    width: 90%;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    height: 40px;
+}
+
+#interview-btn{
+    background: green;
+
+}
+#interview-btn:hover{
+    background: #6da18e;
+    color: gold;
+
+}

@@ -1,0 +1,24 @@
+<h1 style="text-align: center; color: aquamarine;">
+    Welcome to add new students page
+</h1>
+
+<div id="addStudent">
+
+<form id="addStudent-form" action="/students/createStudent" method="POST">
+    <input type="text" name="name" placeholder="Student Name" required id="">
+    <input type="email" name="email" placeholder="Student Email" required id="">
+    <input type="text" name="collage" placeholder="Collage Name" required id="">
+    <input type="text" name="batchName" placeholder="Enrolled Batch Name" required id="">
+    <input type="text" name="dsaScore" placeholder="Dsa Score" required id="">
+    <input type="text" name="webDevScore" placeholder="web Dev Score" required id="">
+    <input type="text" name="reactScore" placeholder="React Score" required id="">
+    <select  name="placement" id="">
+      
+        <option selected >Placed</option>
+        <option>No Placed</option>
+    
+    </select>
+   <input type="submit" value="add" id="addStudent-btn">
+</form>
+
+</div>

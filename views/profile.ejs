@@ -1,0 +1,20 @@
+<div id="profile">
+
+<% if (profile_user) { %>
+  <form id="profile-form" action="/updateProfile/<%=profile_user.id %>" method="POST">
+    
+    <input type="text" name="name" value="<%=profile_user.name%>" required id="">
+    <input type="email" name="email" value="<%=profile_user.email%>" required id="">
+    <input type="text" name="password" value="<%=profile_user.password%>" required id="">
+    <input type="text" name="company" value="<%=profile_user.company%>" required id="">
+    <input type="text" name="idNo" value="<%=profile_user.idNo%>" required id="">
+    <input type="submit" value="Update" id="profile-btn">
+   </form>
+
+
+<% } else { %>
+    <p>User not authenticated. Please log in.</p>
+<% } %>
+</div>
+
+

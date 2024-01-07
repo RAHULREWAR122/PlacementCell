@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<div id="main" >
+
+
+  <% if(locals.user) {%>
+    <h2 style="text-align: center; color: coral;">Students List</h2>
+  
+  <section class="section" id="left">
+   
+    <% for(s of all_students) {%>
+      
+      <div  id="dataHandle">
+    <div class="stData" style="margin-bottom:4px ;">
+    <p>Name :<%= s.name %></p>
+    <p>Email :<%= s.email %></p>
+    <p>Batch :<%= s.batchName %></p>
+    <p>Collage :<%= s.collage %></p>
+    <p>Status :<%= s.placement %></p>
+    <p>DSA :<%= s.dsaScore %></p>
+    <p>Web Dev :<%= s.webDevScore %></p>
+    <p>React :<%= s.reactScore %></p>
+
+    <div>
+    <h5 style="background: #546565;"><a style="margin-left: 40px; color: black;" href="/students/editStudent/<%= s.id %>">Edit</a>
+     <a style="margin-left: 40px; color: black;" href="/students/delete/<%= s.id %>">Delete</a></h5>
+    </div>
+
+
+      <div>
+        <% for(i of s.interviews) {%>
+          <li class="list">
+     
+          <p>Company : <%= i.company %></p>
+          <p> Date :<%= i.date %> </p>
+          <p> Result :<%= i.result %></p>
+        </li>
+
+          <%}%>
+     
+        </div>
+      </div>
+    </div>
+    <%}%>
+ 
+</section>
+
+<div>
+  <h2 style="color: coral;">Interview Companys List</h2>
+
+</div>
+<section id="right" class="section" >
+  <% for (interview of interview) { %>
+   <div class="intData">
+    <h3 >
+      Schedule Interview
+    </h3>
+    
+    <h3 style="color: chocolate;"><%= interview.company %></h3>
+    <p style="color: chocolate;">Date: <%= interview.date %></p>
+    <h3>Enrolled Students:</h3>
+    
+    <% for (student of interview.students) { %>
+      
+      <% if (student && student.student) { %>
+        <li class="list">
+          <p>Name:   <%= student.student.name %></p>
+          <p>Email:   <%= student.student.email %></p>
+          <p>Result: <%= student.result %></p>
+         <a href="/interview/deallocate/<%= student.student.id %>/<%= interview.id %>">Delete</a>
+        </li>
+
+    <% } %>
+       
+
+      <% } %>
+      <h3>Add Students</h3>
+    <form class="form" action="/interview/enrollInInterview/<%= interview.id %>" method="POST">
+      <input type="email" name="email" placeholder="Email" required id="">
+      <input type="hidden" value="<%= interview.id %>" placeholder="Email" required id="">
+      <select name="result" >
+        <option selected>PASS</option>
+        <option >FAIL</option>
+        <option >On Hold</option>
+        <option >Didn't attempt</option>
+      </select>
+      <input type="submit" value="Add" required class="form-btn">
+    </form>
+ 
+ 
+  </div>
+   <% } %> 
+  </div>
+</div>
+  
+ 
+
+
+</section>
+
+
+<%}%>
+</div>
+
+<script src="/js/home.js"></script>
+
+</body>
+</html>

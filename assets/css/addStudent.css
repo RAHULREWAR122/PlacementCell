@@ -1,0 +1,44 @@
+#addStudent {
+  background: radial-gradient(red, blue, black);
+  border: 1px solid red;
+  margin: auto;
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#addStudent-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#addStudent-form > input {
+  width: 90%;
+  margin-top: 10px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: #d9cdcd;
+}
+
+#addStudent-form > select {
+  width: 90%;
+  margin-top: 10px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: #d9cdcd;
+}
+
+#addStudent-btn {
+  background: #1cb01c;
+  color: #202323;
+}
+
+#addStudent-btn:hover {
+  background: #86b3b3;
+  color: #d17bdc;
+}

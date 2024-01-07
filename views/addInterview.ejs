@@ -1,0 +1,12 @@
+<%if(locals.user){%> 
+<h3 style="text-align: center; color: aquamarine;">
+    Add Interview here
+</h3>
+<div id="interview">
+<form id="interview-form" action="/interview/createInterview" method="POST">
+<input type="text" name="company"  placeholder="Company Name" required>
+<input type="date" name="date"   required>
+<input type="submit" value="Set Interview" id="interview-btn">
+</form>
+</div>
+<%}%>

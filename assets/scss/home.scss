@@ -1,0 +1,108 @@
+body{
+    background: #546576;
+   
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: #06ffea;
+    font-weight: 600;
+}
+a:hover{
+    color: #74f86f;
+    
+    
+}
+li{
+    list-style: none;
+}
+#layout-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction:row;
+    background: #8ab362;
+    
+}
+
+section{
+    border: 2px solid green;
+    margin: 4px;  
+    width: 40%;
+    background: #5aabfc;
+    width: 100%;
+    height: 500px;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section::-webkit-scrollbar{
+    display: none;
+}
+
+.stData{
+    width: 300px;
+    background: #bbf086;
+    padding: 10px;
+    margin: 4px;
+    height: 400px;
+    overflow: scroll;
+    
+}
+.stData::-webkit-scrollbar{
+    display: none;
+}
+.intData{
+    width: 300px;
+    background: #bbf086;
+    padding: 10px;
+    margin: 4px;
+    height: 400px;
+    overflow: scroll;
+}
+
+.intData::-webkit-scrollbar{
+    display: none;
+}
+.list{
+    background: #108765;
+    color: antiquewhite;
+    margin: 4px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+    padding: 5px;
+    background: #74f86f;
+}
+.form>input{
+    margin-top: 3px;
+    width: 90%;
+    outline: none;
+    border: none;
+}
+.form>select{
+    margin-top: 3px;
+    width: 90%;
+    outline: none;
+    border: none;
+}
+.form-btn{
+   background-color: #108765;
+   color: #06ffea; 
+}
+.form-btn:hover{
+    background-color: #8ab362;
+    color: azure;
+}
