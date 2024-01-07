@@ -27,8 +27,8 @@ const path = require('path')
 
 app.use(sassMiddleware({
 
-    src :path.join(__dirname , process.env.asset_path ,'scss'),
-    dest : path.join(__dirname , process.env.asset_path , 'css'),
+    src :  (process.env.ASSETS_PATHS ,'scss'),
+    dest : (process.env.ASSETS_PATHS , 'css'),
     debug : false,
     outputStyle :'expanded',
     prefix :'/css'
@@ -41,7 +41,7 @@ const router = require('./routes/user')
 app.set('view engine', 'ejs' );
 app.set('views' ,'./views')
 
-app.use(express.static(process.env.asset_path));
+app.use(express.static(process.env.ASSETS_PATHS));
 
 app.set('layout extractStyles' , true)
 app.set('layout extractScripts' , true)
@@ -51,8 +51,8 @@ app.set('layout extractScripts' , true)
 
 app.use( session({
 
-    name :process.env.session_cookie_name,
-    secret : process.env.session_cookie_secret,
+    name :process.env.SESSION_SECRET_NAME,
+    secret : process.env.SESSION_SECRET_COOKIE,
     saveUninitialized : false ,
     resave : false,
     cookie :{
