@@ -9,7 +9,7 @@
     "startProd": "cross-env NODE_ENV=production nodemon index.js"
   },
   "engines": {
-    "node": ">=18.18.0 <19.0.0"
+    "node": ">=18.18.0"
   },
   "author": "RR",
   "license": "ISC",
